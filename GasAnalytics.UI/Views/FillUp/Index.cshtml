@@ -1,0 +1,69 @@
+﻿@model IEnumerable<GasAnalytics.Models.FillUp>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StationId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CarId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gallons)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PricePerGallon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TripMileage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EnteredMPG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FillUpDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.StationId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gallons)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PricePerGallon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TripMileage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnteredMPG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FillUpDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FillUpId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.FillUpId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.FillUpId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,82 @@
+﻿@model GasAnalytics.Models.FillUp
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FillUp</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StationId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CarId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CarId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gallons)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gallons)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PricePerGallon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PricePerGallon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TripMileage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TripMileage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnteredMPG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnteredMPG)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Calculated MPG")
+        </dt>
+
+        <dd>
+            @(Model.TripMileage / Model.Gallons)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FillUpDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FillUpDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FillUpId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
