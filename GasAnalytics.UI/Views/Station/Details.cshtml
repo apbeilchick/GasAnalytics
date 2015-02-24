@@ -1,7 +1,7 @@
 ﻿@model GasAnalytics.Models.Station
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Station Detail";
 }
 
 <h2>Details</h2>
@@ -11,11 +11,11 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.StationChainId)
+            @Html.DisplayName("Store Chain Name")
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.StationChainId)
+            @Html.DisplayFor(model => model.StationChain.Name)
         </dd>
 
         <dt>

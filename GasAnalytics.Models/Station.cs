@@ -45,5 +45,7 @@ namespace GasAnalytics.Models
         [Required]
         [RegularExpression(@"((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}", ErrorMessage = "Invalid Phone Number!")]
         public string Phone { get; set; }
+
+        public virtual StationChain StationChain { get; set; }
     }
 }

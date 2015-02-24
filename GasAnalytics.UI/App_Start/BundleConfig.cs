@@ -23,8 +23,13 @@ namespace GasAnalytics.UI
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/thirdparty").Include(
+                "~/Scripts/bootstrap-select.js",
+                "~/Scripts/App/GasAnalytics.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/bootstrap-select.css",
                       "~/Content/site.css"));
 
             // Set EnableOptimizations to false for debugging. For more information,

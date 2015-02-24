@@ -124,5 +124,23 @@ namespace GasAnalytics.UI.Controllers
             }
             base.Dispose(disposing);
         }
+
+        // GET: StationChain
+        public JsonResult GetStationChain(int? id)
+        {
+            if (id == null)
+            {
+                return Json((from sc in db.StationChains
+                             select new { StationChainId = sc.StationChainId,
+                                          StationChainName = sc.Name }).ToList(), JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                StationChain sc = db.StationChains.Find(id);
+                return Json(new { StationChainId = sc.StationChainId,
+                                  StationChainName = sc.Name }, JsonRequestBehavior.AllowGet);
+            }
+
+        }
     }
 }
