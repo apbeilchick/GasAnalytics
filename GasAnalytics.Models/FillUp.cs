@@ -18,8 +18,8 @@ namespace GasAnalytics.Models
         public int StationId { get; set; }
 
         [Required]
-        [DisplayName("Car Id")]
-        public int CarId { get; set; }
+        [DisplayName("Vehicle Id")]
+        public int VehicleId { get; set; }
 
         [Required]
         public decimal Gallons { get; set; }

@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Car.cs" />
+    <Compile Include="Vehicle.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="FillUp.cs" />
     <Compile Include="OdometerReading.cs" />

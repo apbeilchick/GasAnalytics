@@ -8,10 +8,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace GasAnalytics.Models
 {
-    public class Car
+    public class Vehicle
     {
-        [DisplayName("Car Id")]
-        public int CarId { get; set; }
+        [DisplayName("Vehicle Id")]
+        public int VehicleId { get; set; }
         
         public string Name { get; set; }
 

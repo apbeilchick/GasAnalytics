@@ -47,7 +47,7 @@ namespace GasAnalytics.UI.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "FillUpId,StationId,CarId,Gallons,PricePerGallon,TripMileage,EnteredMPG,FillUpDate")] FillUp fillUp)
+        public ActionResult Create([Bind(Include = "FillUpId,StationId,VehicleId,Gallons,PricePerGallon,TripMileage,EnteredMPG,FillUpDate")] FillUp fillUp)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace GasAnalytics.UI.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "FillUpId,StationId,CarId,Gallons,PricePerGallon,TripMileage,EnteredMPG,FillUpDate")] FillUp fillUp)
+        public ActionResult Edit([Bind(Include = "FillUpId,StationId,VehicleId,Gallons,PricePerGallon,TripMileage,EnteredMPG,FillUpDate")] FillUp fillUp)
         {
             if (ModelState.IsValid)
             {

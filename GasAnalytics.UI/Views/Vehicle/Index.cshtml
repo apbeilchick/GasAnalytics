@@ -1,4 +1,4 @@
-﻿@model IEnumerable<GasAnalytics.Models.Car>
+﻿@model IEnumerable<GasAnalytics.Models.Vehicle>
 
 @{
     ViewBag.Title = "Index";
@@ -41,9 +41,9 @@
             @Html.DisplayFor(modelItem => item.Year)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CarId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CarId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CarId })
+            @Html.ActionLink("Edit", "Edit", new { id = item.VehicleId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.VehicleId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.VehicleId })
         </td>
     </tr>
 }

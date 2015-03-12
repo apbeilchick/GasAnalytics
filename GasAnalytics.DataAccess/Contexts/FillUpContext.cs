@@ -13,10 +13,10 @@ namespace GasAnalytics.DataAccess
     {
         public FillUpContext() : base ("FillUpContext")
         {
-
+            
         }
 
-        public DbSet<Car> Cars { get; set; }
+        public DbSet<Vehicle> Vehicles { get; set; }
         public DbSet<StationChain> StationChains { get; set; }
         public DbSet<Station> Stations { get; set; }
         public DbSet<OdometerReading> OdometerReadings { get; set; }

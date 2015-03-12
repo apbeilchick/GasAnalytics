@@ -42,8 +42,9 @@ namespace GasAnalytics.UI.Models
         public int Zip { get; set; }
 
         [Required]
-        [RegularExpression(@"((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}", ErrorMessage = "Invalid Phone Number!")]
-        public string Phone { get; set; }
+        [DataType(DataType.PhoneNumber)]
+        [DisplayFormat(DataFormatString = "{0:(###)-###-####}", ApplyFormatInEditMode = true)]
+        public Int64 Phone { get; set; }
 
         public virtual StationChainVM StationChain { get; set; }
     }
